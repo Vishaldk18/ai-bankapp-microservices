@@ -1,0 +1,47 @@
+# Environment files
+
+.env
+
+# Logs
+
+*.log
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# IDE files
+
+.vscode/
+.idea/
+
+# Node
+
+node_modules/
+
+# Python
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+
+# Java / Maven
+
+target/
+*.class
+
+# Build
+
+dist/
+build/
+
+# Docker (optional)
+
+*.tar
+
+# Misc
+
+*.swp
+

@@ -1,0 +1,46 @@
+# Git
+
+.git
+.gitignore
+
+# Node
+
+node_modules
+
+# Python
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+
+# Java / Maven
+
+target/
+*.jar
+*.war
+
+# Logs
+
+*.log
+
+# Env files
+
+.env
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# IDE
+
+.vscode
+.idea
+
+# Docker
+
+Dockerfile
+docker-compose.yml
+README.md
+
