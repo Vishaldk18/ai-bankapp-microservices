@@ -9,3 +9,9 @@ jobs:
       uses: actions/checkout@v4
     - name: build docker image
       run: docker build -t ai-bank-app:latest .
+    - name: docker login
+      env:
+       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+       DOCKERHUB_TOKEN:  ${{ secrets.DOCKERHUB_PASSWORD }}
+      run: |
+       echo "$DOCKERHUB_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
