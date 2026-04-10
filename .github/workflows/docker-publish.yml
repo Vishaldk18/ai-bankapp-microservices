@@ -22,6 +22,7 @@ jobs:
         docker tag ai-bank-app:latest ${{ secrets.DOCKERHUB_USERNAME }}/ai-bank-app:latest
         docker tag ai-bank-app:latest ${{ secrets.DOCKERHUB_USERNAME }}/ai-bank-app:sha-$SHORT_SHA
     - name: push the image
+      if: ${{ github.ref_name == 'main' }}
       run: |
         docker push ${{ secrets.DOCKERHUB_USERNAME }}/ai-bank-app:latest
         docker push ${{ secrets.DOCKERHUB_USERNAME }}/ai-bank-app:sha-$SHORT_SHA
