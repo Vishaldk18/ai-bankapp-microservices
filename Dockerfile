@@ -1,9 +1,14 @@
 # Build stage
-FROM eclipse-temurin:21-jdk-alpine AS build
+#FROM eclipse-temurin:21-jdk-alpine AS build
+#WORKDIR /app
+#COPY . .
+#RUN chmod +x mvnw && ./mvnw clean package -DskipTests -B
+FROM maven:3.9.6-eclipse-temurin-21 AS build
+
 WORKDIR /app
 COPY . .
-RUN chmod +x mvnw && ./mvnw clean package -DskipTests -B
 
+RUN mvn clean package -DskipTests
 # Run stage - alpine has significantly fewer CVEs than ubuntu/jammy
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
