@@ -1,0 +1,11 @@
+name: ai-bank-app-workflow
+on:
+ workflow_dispatch:
+jobs:
+ deploy-app:
+  runs-on: ubuntu-latest
+  steps:
+    - name: checkout code
+      uses: actions/chekout@v4
+    - name: build docker image
+      run: docker build -t ai-bank-app:latest .
