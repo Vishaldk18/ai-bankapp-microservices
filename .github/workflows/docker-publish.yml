@@ -6,6 +6,6 @@ jobs:
   runs-on: ubuntu-latest
   steps:
     - name: checkout code
-      uses: actions/chekout@v4
+      uses: actions/checkout@v4
     - name: build docker image
       run: docker build -t ai-bank-app:latest .
